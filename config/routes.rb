@@ -1,14 +1,16 @@
 FobhApp::Application.routes.draw do
   
+  get "users/new"
+
   root :to => 'pages#home'
   
-  root :to => 'pages#home'
 
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/events', :to => 'pages#events'
   match '/publications', :to => 'pages#publications'
-  match '/signup',    :to => 'users#new'
+  match '/signup', :to =>'users#new'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
