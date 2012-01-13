@@ -1,8 +1,14 @@
 FobhApp::Application.routes.draw do
-  get "pages/home"
+  
+  root :to => 'pages#home'
+  
+  root :to => 'pages#home'
 
-  get "pages/about"
-
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/events', :to => 'pages#events'
+  match '/publications', :to => 'pages#publications'
+  match '/signup',    :to => 'users#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,7 +58,7 @@ FobhApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
 
